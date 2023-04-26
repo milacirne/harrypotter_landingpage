@@ -1,0 +1,50 @@
+@use 'variables';
+
+@mixin displayFlexColumn($display: flex) {
+    display: $display;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact {
+    background-image: url(./../../dist/images/contact/owl.png);
+    height: 70vh;
+    padding: 160px 0;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &__container {
+        @include displayFlexColumn;
+        max-width: 100vw;
+        width: 100%;
+        margin: 0 auto;
+        
+        .title--big {
+            text-transform: uppercase;
+        }
+
+        .title {
+            @include variables.macondo;
+            margin-top: 32px;
+            font-size: 28px;
+            font-weight: lighter;
+        }
+
+        button {
+            @include variables.macondo;
+            padding: 16px;
+            margin-top: 32px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            background-color: variables.$buttonBackgroundColor;
+
+            &:hover {
+                background-color: variables.$textColorPrimary;
+                transition: background-color .8s ease;
+            }
+        }    
+    }
+}

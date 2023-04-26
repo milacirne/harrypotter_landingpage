@@ -1,0 +1,30 @@
+@use 'variables';
+
+.footer {
+    background-color: variables.$backgroundColor;
+    transition: background-color .6s ease-in;
+    padding: 80px 80px;
+    height: 10vh;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+
+        &__social-media {
+            display: flex;
+
+            i {
+            color: rgba(223, 221, 221, 0.878);
+            font-size: 20px;
+            margin-right: 16px;
+
+                &:hover {
+                    color: variables.$overlayIconHover;
+                    transition: color .8s ease;
+                }
+            }
+        }
+    }
+}

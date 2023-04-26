@@ -1,0 +1,68 @@
+@use 'variables';
+@use 'header';
+@use 'hero';
+@use 'hogwarts-houses';
+@use 'contact';
+@use 'directors-producers';
+@use 'gallery';
+@use 'filming-set';
+@use 'newsletter';
+@use 'footer';
+@use 'modifiers';
+
+@mixin title($fontSize: 32px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variables.$textColorPrimary;
+}
+
+@mixin text($fontSize: 20px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variables.$textColorPrimary;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+}
+
+
+.title--big {
+    @include title(56px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(20px);
+}
+
+.text--big {
+    @include text(28px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(18px);
+}
+
+.separator {
+    border-bottom: 3px solid variables.$textColorPrimary;
+    width: 100px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.fa-solid {
+    color: variables.$textColorPrimary;
+}

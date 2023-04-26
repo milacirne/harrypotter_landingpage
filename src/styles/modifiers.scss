@@ -1,0 +1,85 @@
+@use 'variables';
+
+@mixin gryffindorText($color: variables.$gryffindorTextColor) {
+    color: $color;
+}
+
+@mixin hufflepuffText($color: variables.$hufflepuffTextColor) {
+    color: $color;
+}
+
+.--is-gryffindor {
+    background-color: variables.$gryffindorBackground;
+
+    .title--big,
+    .title,
+    .title--small,
+    .directors-producers__container__text.text,
+    .footer__container p,
+    .footer__container__social-media i {
+        @include gryffindorText;
+    }
+
+    .separator {
+        @include gryffindorText;
+        border-bottom: 3px solid;
+    }
+
+    .directors-producers__container__items__overlay {
+        @include gryffindorText;
+        border: 3px solid;
+    }
+
+    .directors-producers__container__items__overlay {
+        i {
+            @include gryffindorText;
+
+            &:hover {
+                color: variables.$overlayIconHover;
+                transition: color .3s ease;
+            }
+        }
+    }
+}
+
+.--is-slytherin {
+    background-color: variables.$slytherinBackground;
+}
+
+.--is-ravenclaw{
+    background-color: variables.$ravenclawBackground;
+}
+
+.--is-hufflepuff{
+    background-color: variables.$hufflepuffBackground;
+
+    .title--big,
+    .title,
+    .title--small,
+    .directors-producers__container__text.text,
+    .footer__container p,
+    .footer__container__social-media i {
+        @include hufflepuffText;
+    }
+
+    .separator {
+        @include hufflepuffText;
+        border-bottom: 3px solid;
+    }
+
+    .directors-producers__container__items__overlay {
+        @include hufflepuffText;
+        border: 3px solid;
+    }
+
+    .directors-producers__container__items__overlay {
+        i {
+            @include hufflepuffText;
+
+            &:hover {
+                color: variables.$overlayIconHover;
+                transition: color .3s ease;
+            }
+        }
+    }
+}

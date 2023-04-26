@@ -1,0 +1,79 @@
+@use 'variables';
+
+.filming-set {
+    height: 100vh;
+    padding: 160px;
+    background-image: url(./../../dist/images/filming_set/filming_set.png);
+    background-size: cover;
+    background-attachment: fixed;    
+
+        &__container {
+            max-width: 80vw;
+            margin: 0 auto;
+
+            &__items {
+                margin-top: 56px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+
+                &__accordion {
+
+                    .text--small {
+                        font-weight: lighter;
+                    }
+
+                    &__item {
+                        border: 3px solid variables.$overlayBackgroundColor;
+                        margin-bottom: 16px;
+
+                        &__item:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        &__header {
+                            background-color: variables.$overlayBackgroundColor;
+                            cursor: pointer;
+                            display: block;
+                            padding: 8px 16px;
+                            position: relative;
+
+                            &::after {
+                                content: '+';
+                                color: variables.$textColorPrimary;
+                                position: absolute;
+                                top: 0;
+                                right: 16px;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                font-size: 40px;
+                            }
+                        }
+
+                        &__content {
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height, .8s ease-out;
+                            padding: 0 16px;
+
+                        }
+                        
+                        &--is-open {
+
+                            .filming-set__container__items__accordion__item__content {
+                                max-height: 500px;
+                                padding: 8px 16px;
+                                transition: max-height, .8s ease-in-out;
+                            }
+
+                            .filming-set__container__items__accordion__item__header::after {
+                                content: '-';
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+}

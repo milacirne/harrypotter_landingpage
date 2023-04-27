@@ -16,10 +16,10 @@
     <header class="header header--is-hidden">
         <div class="header__container">
             <div class="header__container__buttons">
-                <button id="gryffindor" class="button"><img src="./dist/images/header/gryffindor.png" alt="Gryffindor button"></button>
-                <button id="slytherin" class="button"><img src="./dist/images/header/slytherin.png" alt="Slytherin button"></button>
-                <button id="ravenclaw" class="button"><img src="./dist/images/header/ravenclaw.png" alt="Ravenclaw button"></button>
-                <button id="hufflepuff" class="button"><img src="./dist/images/header/hufflepuff.png" alt="Huffepuff button"></button>
+                <button id="gryffindorButton" class="houseButton" data-target="gryffindor"><img src="./dist/images/header/gryffindor.png" alt="Gryffindor button"></button>
+                <button id="hufflepuffButton" class="houseButton" data-target="hufflepuff"><img src="./dist/images/header/hufflepuff.png" alt="Huffepuff button"></button>
+                <button id="ravenclawButton" class="houseButton" data-target="ravenclaw"><img src="./dist/images/header/ravenclaw.png" alt="Ravenclaw button"></button>
+                <button id="slytherinButton" class="houseButton" data-target="slytherin"><img src="./dist/images/header/slytherin.png" alt="Slytherin button"></button>
             </div>
         </div>
     </header>
@@ -46,7 +46,7 @@
     </section>
     </section>
     <section class="hogwarts-houses">        
-        <div class="hogwarts-houses__gryffindor text">
+        <div id="gryffindor" class="hogwarts-houses__gryffindor text box">
             <i class="fa-solid fa-quote-left"></i>
             <p>
                 You might belong in GRYFFINDOR<br>
@@ -56,7 +56,7 @@
             </p>
             <i class="fa-solid fa-quote-right"></i>
         </div>
-        <div class="hogwarts-houses__hufflepuff text">
+        <div id="hufflepuff" class="hogwarts-houses__hufflepuff text box">
             <i class="fa-solid fa-quote-left"></i>
             <p>
                 You might belong in HUFFLEPUFF<br>
@@ -66,7 +66,7 @@
             </p>
             <i class="fa-solid fa-quote-right"></i>
         </div>
-        <div class="hogwarts-houses__ravenclaw text">
+        <div id="ravenclaw" class="hogwarts-houses__ravenclaw text box">
             <i class="fa-solid fa-quote-left"></i>
             <p>
                 Or yet in wise old RAVENCLAW<br>
@@ -76,7 +76,7 @@
             </p>
             <i class="fa-solid fa-quote-right"></i>
         </div>
-        <div class="hogwarts-houses__slytherin text">
+        <div id="slytherin" class="hogwarts-houses__slytherin text box">
             <i class="fa-solid fa-quote-left"></i>
             <p>
                 ...Or perhaps in SLYTHERIN<br>
@@ -91,7 +91,7 @@
         <div class="contact__container">
             <h1 class="title--big">Contact us</h1>
             <h2 class="title">Send Us an Owl today!</h2>
-            <button type="submit">Click in here</button>
+            <button type="submit">Click here</button>
         </div>
     </section>
     <section class="directors-producers">

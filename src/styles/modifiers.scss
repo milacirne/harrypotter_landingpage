@@ -8,6 +8,37 @@
     color: $color;
 }
 
+.houseButton--is-spinning {
+    animation: spin 2s linear infinite;
+
+    @keyframes spin {
+        0% { transform: rotateY(0deg); }
+        100% { transform: rotateY(360deg); }
+    }
+}
+
+.hogwarts-houses__gryffindor--is-active {
+    @include variables.background;
+    background-image: linear-gradient(to top right, variables.$gryffindorBackgroundBox 20%, variables.$gryffindorBackgroundDark), url(./../../dist/images/hogwarts-houses/gryffindor.png);
+}
+
+.hogwarts-houses__hufflepuff--is-active {
+    @include variables.background;
+    background-image: linear-gradient(to top right, variables.$hufflepuffBackground 20%, variables.$hufflepuffBackgroundDark), url(./../../dist/images/hogwarts-houses/hufflepuff.png);
+}
+
+.hogwarts-houses__ravenclaw--is-active {
+    @include variables.background;
+    background-image: linear-gradient(to top right, variables.$ravenclawBackgroundBox 20%, variables.$ravenclawBackgroundDark), url(./../../dist/images/hogwarts-houses/ravenclaw.png);
+}
+
+.hogwarts-houses__slytherin--is-active {
+    @include variables.background;
+    background-image: linear-gradient(to top right, variables.$slytherinBackgroundBox 20%, variables.$slytherinBackgroundDark), url(./../../dist/images/hogwarts-houses/slytherin.png);
+}
+
+
+
 .--is-gryffindor {
     background-color: variables.$gryffindorBackground;
 

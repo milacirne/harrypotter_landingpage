@@ -1,12 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+
+// Activating Hogwarts houses boxes in hogwarts-houses section
+const houseBoxes = document.querySelectorAll('.hogwarts-houses > div');
+const houseButtons = document.querySelectorAll('.houseButton');
+
+houseButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const targetHouse = button.getAttribute('data-target');
+
+        houseButtons.forEach(button => {
+            button.classList.remove('houseButton--is-spinning');
+        });
+
+        button.classList.add('houseButton--is-spinning');
+
+        houseBoxes.forEach(houseBox => {
+        const houseBoxId = houseBox.getAttribute('id');
+        
+            if (houseBoxId === targetHouse) {
+                houseBox.classList.add(`hogwarts-houses__${targetHouse}--is-active`);
+                houseBox.setAttribute('aria-hidden', 'false');
+            } else {
+                houseBox.classList.remove(`hogwarts-houses__${houseBoxId}--is-active`);
+                houseBox.setAttribute('aria-hidden', 'true');
+            }
+        });
+    });
+});
+
 // Adding houses modifiers when clicking header buttons
-const gryffindorButton = document.getElementById('gryffindor');
-const slytherinButton = document.getElementById('slytherin');
-const ravenclawButton = document.getElementById('ravenclaw');
-const hufflepuffButton = document.getElementById('hufflepuff');
+const gryffindorButton = document.getElementById('gryffindorButton');
+const slytherinButton = document.getElementById('slytherinButton');
+const ravenclawButton = document.getElementById('ravenclawButton');
+const hufflepuffButton = document.getElementById('hufflepuffButton');
 
 const modifiers = ['--is-gryffindor', '--is-slytherin', '--is-ravenclaw', '--is-hufflepuff'];
-
 const directorsSection = document.querySelector('.directors-producers');
 const gallerySection = document.querySelector('.gallery');
 const footer = document.querySelector('.footer');
@@ -15,6 +44,7 @@ gryffindorButton.addEventListener('click', function() {
     removeModifiers(directorsSection, modifiers);
     removeModifiers(gallerySection, modifiers);
     removeModifiers(footer, modifiers);
+    
     directorsSection.classList.toggle('--is-gryffindor');
     gallerySection.classList.toggle('--is-gryffindor');
     footer.classList.toggle('--is-gryffindor');
@@ -52,7 +82,6 @@ hufflepuffButton.addEventListener('click', function() {
 // Header buttons
 const arrowUpButton = document.querySelector('.fa-angle-up');
 let sticky = arrowUpButton.offsetTop;
-
 
 // Hero buttons
 let letterButton = document.querySelector('.hero__content__information__letter');
@@ -116,7 +145,6 @@ let accordionHeaders = document.querySelectorAll('[data-accordion-header]');
     }
 
 });
-
 
 
 

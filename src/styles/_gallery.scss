@@ -47,7 +47,7 @@
                 .text,
                 .text--small {
                     @include variables.macondo;
-                    font-weight: bold;
+                    font-weight: lighter;
                 }
 
                 .fa-solid {

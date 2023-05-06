@@ -14,6 +14,10 @@
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variables.$textColorPrimary;
+
+    @media (max-width: 768px) {
+        line-height: normal;
+    }
 }
 
 @mixin text($fontSize: 20px) {
@@ -34,26 +38,50 @@
 
 .title--big {
     @include title(56px);
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
 }
 
 .title {
     @include title;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
 }
 
 .title--small {
     @include title(20px);
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .text--big {
     @include text(28px);
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
 }
 
 .text {
     @include text;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .text--small {
     @include text(18px);
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
 }
 
 .separator {
@@ -61,6 +89,11 @@
     width: 100px;
     margin-top: 64px;
     margin-bottom: 64px;
+
+    @media (max-width: 768px) {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
 }
 
 .fa-solid {

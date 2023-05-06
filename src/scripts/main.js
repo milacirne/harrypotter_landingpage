@@ -78,34 +78,10 @@ hufflepuffButton.addEventListener('click', function() {
 })
 
 
-
-// Header buttons
+//Arrow-up button
 const arrowUpButton = document.querySelector('.fa-angle-up');
 let sticky = arrowUpButton.offsetTop;
 
-// Hero buttons
-let letterButton = document.querySelector('.hero__content__information__letter');
-let arrowButton = document.querySelector('.fa-caret-up');
-let hero = document.querySelector('.hero');
-let text = document.querySelector('.hero__about')
-
-letterButton.addEventListener('click', function () {
-    hero.classList.remove('--is-cropped');
-
-    if (!hero.classList.contains('--is-cropped')) {
-        text.scrollIntoView({ behavior: 'smooth' });
-    };
-});
-
-arrowButton.addEventListener('click', function () {
-    hero.classList.add('--is-cropped');
-
-    if (hero.classList.contains('--is-cropped')) {
-        hero.scrollIntoView({behavior: 'smooth'});
-    };
-});
-
-//Arrow-up button
 document.addEventListener('scroll', function() {
     if (window.pageYOffset > sticky) {
         arrowUpButton.classList.add('fa-angle-up--is-visible');

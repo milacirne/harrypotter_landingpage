@@ -14,12 +14,19 @@
 }
 
 .hogwarts-houses {
-    height: 60vh;
+    min-height: 60vh;
     background-color: variables.$backgroundColor;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 768px) {
+        margin: 0 auto;
+        display: block;
+        padding: 48px;
+        min-height: 115vh;
+    }
 
         &__gryffindor,
         &__hufflepuff,
@@ -28,10 +35,23 @@
             position: relative;
             padding: 80px 32px;
             border-radius: 20px;
+            max-width: 90%;
+
+            @media (max-width: 768px) {
+                margin: 10px auto;
+                padding: 20px 20px;
+                max-width: 350px;
+                min-width: 275px;
+            }
 
             p {
                 @include margin;
                 @include variables.macondo;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                    text-align: center;
+                }
             }
 
             .fa-quote-right {

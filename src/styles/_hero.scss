@@ -2,20 +2,26 @@
 
 .hero {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 9) 20%, rgba(0, 0, 0, 0.6) 50%, transparent), url(../../dist/images/hero/hero.jpg);
-    background-size: auto 160vh;
+    background-size: cover;
     background-repeat: no-repeat;
-    padding: 7vw 7vw;
-    height: 160vh;
-    text-align: center;
+    padding: 7vw;
+    min-height: 100vh;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 768px) {
+        background-image: linear-gradient(to top, variables.$backgroundColor 30%, variables.$backgroundColor 60%,  transparent), url(../../dist/images/hero/hero_mobile.png);
+        background-size: contain;
+        min-height: 70vh;
+    }
 
     &__content {
         color: variables.$textColorPrimary;
         max-width: 680px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            margin-top: 180px;
+        }
 
         &__information {
             margin: 0 auto;
@@ -26,26 +32,43 @@
             img {
                 height: 250px;
                 margin-bottom: 96px;
+
+                @media (max-width: 768px) {
+                    height: 150px;
+                    margin-bottom: 16px;
+                    padding: 1vw;
+                }
             }
 
             .title,
             .title-small {
                 text-transform: uppercase;
+                white-space: nowrap;
             }
 
             .title--small {
                 @include variables.macondo;
                 margin-top: 8px;
+
+                @media (max-width: 768px) {
+                    margin-top: 0;
+                }
             }
 
             &__letter {
                 margin-top: 40px;
 
+                @media (max-width: 768px) {
+                    margin-top: 32px;
+                }
+
                 img {
                     height: 130px;
-                    cursor: pointer;
                     animation: spin 5s linear infinite;
-                    margin-bottom: 48px;
+
+                    @media (max-width: 768px) {
+                        height: 80px;
+                    }
                 }
 
                 @keyframes spin {
@@ -56,32 +79,6 @@
         }
     }
 
-    &__about {
-        margin-top: 72px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        scroll-margin: 100px;
-
-        &__text {
-            margin-top: 32px;
-            padding: 16px;
-            background-color: rgba(0, 0, 0, 0.4);
-            border-radius: 30px;
-
-            .text {
-                @include variables.macondo;
-                margin-top: 24px;
-            }
-        }
-    }
-
-    .fa-caret-up {
-        color: variables.$textColorPrimary;
-        font-size: 40px;
-        cursor: pointer;
-}
-
     .fa-angle-up {
         color: variables.$textColorPrimary;
         font-size: 40px;
@@ -91,7 +88,7 @@
         position: fixed;
         background-color: rgba(0, 0, 0, 0.4);
         border-radius: 5px;
-        bottom: 6vh;
+        bottom: 3vh;
         right: 2vw;
         opacity: 0;
         pointer-events: none;
@@ -108,11 +105,4 @@
             z-index: 9999;
         }
     }
-}
-
-.--is-cropped {
-    height: calc(160vh - 50vh);
-    clip: rect(auto, auto, calc(160vh - 50vh), auto);
-    overflow-y: hidden;
-    transition: all 0.7s ease;
 }

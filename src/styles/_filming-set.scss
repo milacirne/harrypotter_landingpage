@@ -1,11 +1,15 @@
 @use 'variables';
 
 .filming-set {
-    height: 100vh;
+    min-height: 100vh;
     padding: 160px;
     background-image: url(./../../dist/images/filming_set/filming_set.png);
     background-size: cover;
-    background-attachment: fixed;    
+    background-attachment: fixed;
+    
+    @media (max-width: 768px) {
+        padding: 88px 24px;
+    }
 
         &__container {
             max-width: 80vw;
@@ -17,8 +21,13 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 32px;
 
-                &__accordion {
+                @media (max-width: 768px) {
+                    display: block;
+                    min-width: 300px;
+                    max-width: 600px;
+                }
 
+                &__accordion {
                     .text--small {
                         font-weight: lighter;
                     }
@@ -26,6 +35,10 @@
                     &__item {
                         border: 3px solid variables.$overlayBackgroundColor;
                         margin-bottom: 16px;
+
+                        @media (max-width: 768px) {
+                            display: block;
+                        }
 
                         &__item:last-child {
                             margin-bottom: 0;
@@ -72,6 +85,15 @@
                             }
 
                         }
+                    }
+                }
+
+                &__video {
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        margin-bottom: 64px;
+                        min-width: 300px;
+                        max-width: 600px;
                     }
                 }
             }

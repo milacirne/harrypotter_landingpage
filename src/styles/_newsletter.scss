@@ -2,12 +2,16 @@
 
 .newsletter {
     background-color: variables.$textColorPrimary;
-    height: 90vh;
+    max-height: 90vh;
     padding: 120px 0;
+
+    @media (max-width: 768px) {
+        padding: 80px 0;
+    }
 
     &__container {
         max-width: 80vw;
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -15,7 +19,7 @@
 
         .title,
         .title--small,
-        .text--small {
+        .text {
             color: variables.$hufflepuffTextColor;
         }
 
@@ -23,7 +27,7 @@
             text-transform: uppercase;
         }
 
-        .text--small {
+        .text {
             font-weight: lighter;
             text-align: justify;
         }
@@ -32,9 +36,9 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            width: 100%;
             margin-top: 88px;
             margin-bottom: 88px;
-            gap: 20vw;
 
             &__item {
                 display: flex;
@@ -63,6 +67,10 @@
                 font-size: 16px;
                 width: 100%;
                 border: 2px solid variables.$hufflepuffTextColor;
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
             }
 
             &__name {
@@ -77,6 +85,10 @@
                 cursor: pointer;
                 max-width: 15vw;
                 text-transform: uppercase;
+
+                @media (max-width: 768px) {
+                    max-width: 80px;
+                }
 
                 &:hover {
                     background-color: variables.$textColorPrimary;

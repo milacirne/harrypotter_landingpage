@@ -33,7 +33,7 @@
         &__ravenclaw,
         &__slytherin {
             position: relative;
-            padding: 80px 32px;
+            padding: 72px 24px;
             border-radius: 20px;
             max-width: 90%;
 
@@ -47,10 +47,10 @@
             p {
                 @include margin;
                 @include variables.macondo;
+                text-align: center;
 
                 @media (max-width: 768px) {
                     font-size: 16px;
-                    text-align: center;
                 }
             }
 

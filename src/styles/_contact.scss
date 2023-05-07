@@ -15,8 +15,7 @@
     background-attachment: fixed;
 
     @media (max-width: 768px) {
-        background-image: url(./../../dist/images/contact/owl_mobile.jpg);
-        background-position: center center;
+        background-position: center;
         background-attachment: scroll;
         height: 40vh;
         padding: 70px 0;

@@ -7,16 +7,16 @@
 }
 
 .contact {
-    background-image: url(./../../dist/images/contact/owl.png);
-    min-height: 70vh;
+    background-image: url(./../../dist/images/contact/owl.jpg);
+    height: 70vh;
     padding: 160px 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
     @media (max-width: 768px) {
-        background-image: url(./../../dist/images/contact/owl_mobile.png);
-        min-height: 40vh;
+        background-image: url(./../../dist/images/contact/owl_mobile.jpg);
+        height: 40vh;
         padding: 70px 0;
     }
 

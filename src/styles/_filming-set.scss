@@ -3,8 +3,9 @@
 .filming-set {
     min-height: 100vh;
     padding: 160px;
-    background-image: url(./../../dist/images/filming_set/filming_set.png);
+    background-image: url(./../../dist/images/filming_set/filming_set.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     
     @media (max-width: 768px) {

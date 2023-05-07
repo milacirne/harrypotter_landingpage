@@ -3,14 +3,13 @@
 .filming-set {
     min-height: 1000px;
     padding: 160px;
-    background-image: url(./../../dist/images/filming_set/filming_set.jpg);
+    background-image: url(./../../dist/images/filming_set/filming_set.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     
     @media (max-width: 768px) {
         padding: 88px 24px;
-        background-image: url(./../../dist/images/filming_set/filming_set.jpg);
         background-size: auto;
     }
 

@@ -14,7 +14,7 @@
 }
 
 .hogwarts-houses {
-    min-height: 60vh;
+    min-height: 350px;
     background-color: variables.$backgroundColor;
     display: flex;
     flex-direction: row;
@@ -25,7 +25,14 @@
         margin: 0 auto;
         display: block;
         padding: 8px 16px 16px 16px;
-        min-height: 115vh;
+        max-height: 900px;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1023px) {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        min-height: 40vh;
+        padding: 40px 0;
     }
 
         &__gryffindor,
@@ -33,14 +40,20 @@
         &__ravenclaw,
         &__slytherin {
             position: relative;
-            padding: 72px 24px;
-            border-radius: 20px;
+            padding: 48px 24px;
+            border-radius: 40px;
             max-width: 90%;
+
+            @media screen and (min-width: 769px) and (max-width: 1023px) {
+                padding: 16px 8px;
+                margin: 0 auto;
+            }
 
             @media (max-width: 768px) {
                 margin: 10px auto;
-                padding: 24px;
-                max-width: 350px;
+                padding: 16px;
+                border-radius: 50px;
+                max-width: 300px;
                 min-width: 275px;
             }
 
@@ -54,9 +67,17 @@
                 }
             }
 
-            .fa-quote-right {
+            .fa-quote-right,
+            .fa-quote-left {
                 position: absolute;
+            }
+
+            .fa-quote-right {
                 right: 10%;
+            }
+
+            .fa-quote-left {
+                left: 10%;
             }
         }
 }

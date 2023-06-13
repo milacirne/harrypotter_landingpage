@@ -9,7 +9,7 @@
 .contact {
     background-image: url(./../../dist/images/contact/owl.jpg);
     height: 560px;
-    padding: 160px 0;
+    padding: 168px 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,8 +17,13 @@
     @media (max-width: 768px) {
         background-position: center;
         background-attachment: scroll;
-        height: 40vh;
+        height: 300px;
         padding: 70px 0;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1023px) {
+        padding: 152px 0;
+        height: 500px;
     }
 
     &__container {

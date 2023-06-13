@@ -86,6 +86,7 @@
                 max-width: 15vw;
                 text-transform: uppercase;
                 background-color: variables.$textColorPrimary;
+                color: variables.$hufflepuffTextColor;
 
                 @media (max-width: 768px) {
                     max-width: 80px;

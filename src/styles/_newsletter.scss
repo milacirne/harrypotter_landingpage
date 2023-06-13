@@ -2,7 +2,7 @@
 
 .newsletter {
     background-color: variables.$textColorPrimary;
-    max-height: 90vh;
+    height: 700px;
     padding: 120px 0;
 
     @media (max-width: 768px) {
@@ -85,13 +85,14 @@
                 cursor: pointer;
                 max-width: 15vw;
                 text-transform: uppercase;
+                background-color: variables.$textColorPrimary;
 
                 @media (max-width: 768px) {
                     max-width: 80px;
                 }
 
                 &:hover {
-                    background-color: variables.$textColorPrimary;
+                    background-color: variables.$buttonBackgroundColor;
                     transition: background-color .8s ease;
                 }
             }
